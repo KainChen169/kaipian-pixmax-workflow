@@ -21,9 +21,9 @@ python -B run_pixmax.py --version
 Windows可用一键安装.cmd／安装升级.ps1。CLI覆盖层仅匹配build100012／1.3.0；其他CLI版本必须重新确认兼容。安装不等于目标机登录或在线制作验证。
 
 ## 下载、版本及安全
-GitHub目标：私有仓库 `KainChen169/kaipian-pixmax-workflow`。同事须由仓库所有者授予访问后下载。每次更新下载最新版本，再做校验、dry-run、安装；不要直接覆盖个人配置或把旧项目执行记录当模板。
+GitHub：公开仓库 `KainChen169/kaipian-pixmax-workflow`（2026-10-10按所有者确认公开）。任何人可访问和下载，无需成员邀请。每次更新下载最新版本，再做校验、dry-run、安装；不要直接覆盖个人配置或把旧项目执行记录当模板。
 本包不含账号凭据、登录态、剧本／媒体／项目UUID／任务记录；两个927旧流程和旧项目模板不打包。包内历史后处理参考仅待明确恢复时使用，不能覆盖顶部冻结规则。来源日期前缀与S编号、公共资产认领和真实@标准均保留。
 
 ## 获取最新安装包
 
-请在 [Releases](https://github.com/KainChen169/kaipian-pixmax-workflow/releases/latest) 下载完整ZIP；不要只下载本仓库说明文件。解压后先校验、dry-run，再安装。版本发布采用独立标签，旧版本可追溯。私有仓库须先登录获授权的GitHub账号。
+请在 [Releases](https://github.com/KainChen169/kaipian-pixmax-workflow/releases/latest) 下载完整ZIP；不要只下载本仓库说明文件。解压后先校验、dry-run，再安装。版本发布采用独立标签，旧版本可追溯。公开下载无需登录或成员邀请。ZIP内关于私有访问的说明是打包时状态，以本页最新说明为准；包内容与校验哈希不变。
