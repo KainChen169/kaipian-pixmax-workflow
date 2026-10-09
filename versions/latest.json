@@ -1,0 +1,9 @@
+{
+  "snapshot": "2026-10-09",
+  "release_tag": "v13.4.1-prep-20261009",
+  "director_version": "13.4.1",
+  "default_stop": "before_video_generation",
+  "zip": "Pixmax_完整工作流_B13.4.1_生成前准备版_20261009.zip",
+  "sha256": "d398e7f6b4c09a6da5ae26d1ff020d0ef003a623acf0a3b1bd28a3cd71c99684",
+  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.1-prep-20261009"
+}
