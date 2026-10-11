@@ -1,13 +1,13 @@
 {
   "snapshot": "2026-10-11",
   "published": "2026-10-11",
-  "workflow_version": "13.4.8",
-  "release_tag": "v13.4.8-prep-20261011",
+  "workflow_version": "13.4.9",
+  "release_tag": "v13.4.9-prep-20261011",
   "director_version": "13.4.2",
   "default_stop": "before_video_generation",
-  "zip": "pixmax-workflow-B13.4.8-prep-20261011.zip",
-  "bytes": 1820071,
-  "sha256": "9c77a44b8f72dc4bfcb5055cff755ebe0b073285bff78b12de63009a23fc2d39",
-  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.8-prep-20261011",
-  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.8-prep-20261011/pixmax-workflow-B13.4.8-prep-20261011.zip"
+  "zip": "pixmax-workflow-B13.4.9-prep-20261011.zip",
+  "bytes": 1813941,
+  "sha256": "168e5da7fe51e3fa991a5a5e47802359be4ae73f513b0cc53d8958941cd8e03c",
+  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.9-prep-20261011",
+  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.9-prep-20261011/pixmax-workflow-B13.4.9-prep-20261011.zip"
 }
