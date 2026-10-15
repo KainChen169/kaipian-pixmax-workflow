@@ -1,0 +1,13 @@
+{
+  "snapshot": "2026-10-15",
+  "published": "2026-10-15",
+  "workflow_version": "13.4.13",
+  "release_tag": "v13.4.13-prep-20261015",
+  "director_version": "13.4.4-shot-detail-post-memory-20261015",
+  "default_stop": "before_video_generation",
+  "zip": "pixmax-workflow-B13.4.13-prep-20261015.zip",
+  "bytes": 1867374,
+  "sha256": "83ab46c527269601a58407d8fa8d15ed6e989e2c85ec769fd4306f058ba4710d",
+  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.13-prep-20261015",
+  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.13-prep-20261015/pixmax-workflow-B13.4.13-prep-20261015.zip"
+}

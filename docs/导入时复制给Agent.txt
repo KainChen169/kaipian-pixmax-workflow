@@ -1,7 +1,12 @@
-请从 https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.12-prep-20261015 下载附件 pixmax-workflow-B13.4.12-prep-20261015.zip 更新工作流B13.4.12／默认导演B13.4.4，不用Source code。核对发布页及对应版本索引的SHA-256，安全解压，读取README_先读我.md、本次更新说明.md及跨会话规则_合并片段.md。
+请下载并更新此工作流：
+https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.13-prep-20261015
 
-先备份注册Skills、实际维护源与相关AGENTS，核对定制冲突／更高版本。已有完整工作流，本次运行verify_package.py，然后用 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --skill ab-test-seedance25-director-compiler-v13-4-0 --dry-run，核对后用同参数去掉--dry-run安装，只更新这两项，保留其他资产／选角定制；新机器缺依赖时才核对完整包安装。安装器不自动同步维护源或合并AGENTS，请按实际目录同步两项修正并定点合并Pixmax规则，不覆盖其他个人偏好，不删除未知额外文件，不盲目降级。
+下载附件 pixmax-workflow-B13.4.13-prep-20261015.zip，不要下载Source code。核对Release及versions/latest.json的SHA-256，再解压阅读README_先读我.md、本次更新说明.md与跨会话规则_合并片段.md。
 
-落实每个子镜头的构图＋画面内容相对同镜短写版充分展开约2–3倍：动作过程、表演变化、空间层次、摄影路径／焦点和落幅用自然语言写具体；不是整稿机械倍增，不靠长前置或少数长镜补数。取消旧5500／7000字同比及±6%默认整稿约束，保留逐镜统计及语义复核，无合适基线直接写足，不先造短稿。详细文字不增剧情、台词、切镜、独立动作或时长；原话、回忆、七板块、首镜全景、逐镜背景、整场调度、资产／真实@／防重检查保留。旧LOCK及历史画布不批量重写。
+工作流版本13.4.13-prep-20261015；默认导演13.4.4-shot-detail-post-memory-20261015。本次仅取消自动添加回忆区别性视觉效果，由人工后期处理；回忆标注、来源原话、可读窗口、现实触发与返回衔接、逐镜细写和其他标准保留。剧本本有的雾、灯光、剧情特效不删。
 
-运行导演和主流程本地回归，核对实际版本、备份及源／注册哈希一致后刷新会话报告。默认视频生成、超分、剪辑台、自动下载导出仍冻结；本次仅安装更新，不制作项目、不收费生成、不再次发布本包。
+先备份注册Skills、对应维护源及相关AGENTS，运行python3 verify_package.py，再运行：
+python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --skill ab-test-seedance25-director-compiler-v13-4-0 --dry-run
+确认没有未知定制或更高版本冲突后，去掉--dry-run实际安装，并同步实际维护源。只定点合并回忆视觉交后期规则，不覆盖其他个人规则／Skills／CLI。新电脑缺完整依赖时按README完整安装。
+
+运行本地回归、核对版本及源／注册入口，刷新会话。仅安装更新，不制作、不收费生成、不操作历史提示词／LOCK／画布，不恢复视频生成、超分、剪辑台或下载冻结，不再次发布本包。报告实际更新结果和未完成项。
