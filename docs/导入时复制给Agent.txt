@@ -1,12 +1,12 @@
-请下载并更新此工作流：
-https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.13-prep-20261015
+请从以下Release下载完整工作流附件ZIP，不要下载Source code：
+https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.14-prep-20261016
 
-下载附件 pixmax-workflow-B13.4.13-prep-20261015.zip，不要下载Source code。核对Release及versions/latest.json的SHA-256，再解压阅读README_先读我.md、本次更新说明.md与跨会话规则_合并片段.md。
+核对Release和versions/latest.json的SHA-256后解压，阅读README_先读我.md、本次更新说明.md、跨会话规则_合并片段.md。目标工作流13.4.14-prep-20261016；默认导演13.4.4-shot-detail-body-mentions-20261016。
 
-工作流版本13.4.13-prep-20261015；默认导演13.4.4-shot-detail-post-memory-20261015。本次仅取消自动添加回忆区别性视觉效果，由人工后期处理；回忆标注、来源原话、可读窗口、现实触发与返回衔接、逐镜细写和其他标准保留。剧本本有的雾、灯光、剧情特效不删。
+本次只升级人物／场景／道具真实@方式：保留前置三项指定，子镜头正文关键具名位置按v2显式锚点追加同资产引用，人物／关键道具每镜一次、场景在首镜或真实转场／回忆切换；输入与连线去重、台词引号内不动，原文可逆还原。昼夜策略未改，回忆效果仍交后期，历史v1／LOCK不迁移。脚本离线通过不代表平台已验证支持重复引用，首次保存回读只在当次已授权制作任务内进行。
 
-先备份注册Skills、对应维护源及相关AGENTS，运行python3 verify_package.py，再运行：
+先备份注册Skills、维护源及相关AGENTS，运行python3 verify_package.py，再运行：
 python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --skill ab-test-seedance25-director-compiler-v13-4-0 --dry-run
-确认没有未知定制或更高版本冲突后，去掉--dry-run实际安装，并同步实际维护源。只定点合并回忆视觉交后期规则，不覆盖其他个人规则／Skills／CLI。新电脑缺完整依赖时按README完整安装。
+核对未知定制／更高版本冲突后去掉--dry-run安装，同步实际维护源，只定点合并新增@规则，保留其他Skills、CLI与个人设置。运行本地回归、刷新会话并核对实际版本。
 
-运行本地回归、核对版本及源／注册入口，刷新会话。仅安装更新，不制作、不收费生成、不操作历史提示词／LOCK／画布，不恢复视频生成、超分、剪辑台或下载冻结，不再次发布本包。报告实际更新结果和未完成项。
+仅更新安装，不创建测试画布、不操作历史项目，不生成图片／视频，不恢复视频生成、超分、剪辑台或自动下载冻结，不再次发布本包。新电脑缺全套依赖时按README完整安装。报告真实结果及未完成项。
