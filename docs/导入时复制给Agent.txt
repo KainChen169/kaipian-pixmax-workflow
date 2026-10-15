@@ -1,12 +1,13 @@
-请从以下Release下载完整工作流附件ZIP，不要下载Source code：
-https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.14-prep-20261016
+请从以下Release下载完整附件ZIP，不要下载Source code：
+https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.15-prep-20261016
 
-核对Release和versions/latest.json的SHA-256后解压，阅读README_先读我.md、本次更新说明.md、跨会话规则_合并片段.md。目标工作流13.4.14-prep-20261016；默认导演13.4.4-shot-detail-body-mentions-20261016。
+核对Release与versions/latest.json的SHA-256，解压阅读README_先读我.md、本次更新说明.md和跨会话规则_合并片段.md。
+目标工作流：13.4.15-prep-20261016；默认导演未变：13.4.4-shot-detail-body-mentions-20261016。
 
-本次只升级人物／场景／道具真实@方式：保留前置三项指定，子镜头正文关键具名位置按v2显式锚点追加同资产引用，人物／关键道具每镜一次、场景在首镜或真实转场／回忆切换；输入与连线去重、台词引号内不动，原文可逆还原。昼夜策略未改，回忆效果仍交后期，历史v1／LOCK不迁移。脚本离线通过不代表平台已验证支持重复引用，首次保存回读只在当次已授权制作任务内进行。
+新补／派生／修复三类图按项目既定欧美国家／时代与非亚洲角色选型，无中文／中国视觉元素；补图Prompt正文英文，必要画面文字英文，无文字需求不添字，中文工作文件保留。剧情必要文字、数字／数据及静态效果尽量由AIGC补图／编辑直接完成，不默认空白等人工后期；准确性按来源，动画等动态效果只准备对应完整词，静态图不冒充动画，不解除视频冻结。母图复用、轻微状态免补图、原身份／剧情／原话、真实@、次数、昼夜和回忆规则保留，不返修历史画布。
 
-先备份注册Skills、维护源及相关AGENTS，运行python3 verify_package.py，再运行：
-python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --skill ab-test-seedance25-director-compiler-v13-4-0 --dry-run
-核对未知定制／更高版本冲突后去掉--dry-run安装，同步实际维护源，只定点合并新增@规则，保留其他Skills、CLI与个人设置。运行本地回归、刷新会话并核对实际版本。
+先备份注册Skills、维护源及相关AGENTS，运行python3 verify_package.py；升级既有环境运行：
+python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --dry-run
+核对未知定制／更高版本冲突后去掉--dry-run安装，同步实际维护源，仅定点合并本次两条新增规则，保留其他Skills／CLI／个人设置；运行回归，刷新会话并报告实际版本。新电脑缺依赖时按README和--help做全套安装。
 
-仅更新安装，不创建测试画布、不操作历史项目，不生成图片／视频，不恢复视频生成、超分、剪辑台或自动下载冻结，不再次发布本包。新电脑缺全套依赖时按README完整安装。报告真实结果及未完成项。
+仅更新安装，不操作历史项目／画布，不生成图片／视频，不恢复视频生成、超分、剪辑台或自动下载，不再次发布本包。未完成项如实报告，不把安装成功当成图片效果已验证。
