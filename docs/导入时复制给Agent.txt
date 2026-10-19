@@ -1,13 +1,11 @@
-请从本Release下载完整附件ZIP，不要下载Source code：
-https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.16-prep-20261016
+请从此Release下载完整附件ZIP，不要下载Source code：
+https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.17-prep-20261019
 
-核对Release及versions/latest.json的SHA-256，解压后读README_先读我.md、本次更新说明.md与跨会话规则_合并片段.md。
-目标工作流13.4.16-prep-20261016；默认导演13.4.4-shot-detail-emotion-intent-20261016，仍为B13.4.4逐镜细写版。
+核对Release及versions/latest.json的SHA-256，解压阅读README_先读我.md、本次更新说明.md和跨会话规则_合并片段.md。
+目标工作流13.4.17-prep-20261019；默认导演保持13.4.4-shot-detail-emotion-intent-20261016。
 
-本次只新增一条表演意图转译原则，不设身体颜色禁词表、不堆固定微动作，不改原话／剧情事实／历史LOCK；其他规则沿用B13.4.15。
+唯一制作变化：后续授权范围内全部视频生成节点，在原输入末尾加同一随包assets/black-2s.mp4真实BASE_VIDEO连线，每节点一次、每画布复用。只连接，不在提示词加黑场@／说明／镜头，不当首尾帧或片头片尾、不增加时长；原图顺序／编号、原文和参数不变。源SHA-256 b7ae7afdd2f44519b01e6852d5c8bb5589cdd4be90e70d3a1810bc01b235add1。新任务登记connection_only_video及当前媒体容量，保存回读真实节点与asset UUID；旧清单兼容，不批量迁移。平台实际保存未测试，不能把离线通过说成接入已验证。
 
-先备份注册Skills及实际维护源，运行python3 verify_package.py；运行：
-python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --skill ab-test-seedance25-director-compiler-v13-4-0 --dry-run
-检查未知定制／更高版本冲突后去掉--dry-run安装，同步本地维护源，保留无关Skills、个人设置和全局AGENTS。刷新会话，报告实际版本、备份路径与未解决项。新电脑缺依赖才按--help完整安装，不盲目覆盖其他组件。
+先备份注册Skills、维护源及相关AGENTS，运行python3 verify_package.py；运行python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --dry-run，检查定制冲突后去掉--dry-run安装，同步实际维护源，仅定点合并新增黑场规则，保留其他设置。执行回归、刷新会话并报告实际版本。新电脑缺依赖按README及--help完整安装。
 
-仅更新，不制作、不改历史稿或画布、不生成图片／视频，不恢复视频生成、补修、超分、剪辑台及自动下载，不再次发布本包。离线检查不是生成效果保证。
+仅更新安装，不操作历史项目／画布、不生成媒体，不恢复视频生成／补修、超分、剪辑台或自动下载，不再次发布本包，实际缺项如实报告。
