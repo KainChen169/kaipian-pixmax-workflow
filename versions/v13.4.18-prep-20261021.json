@@ -1,0 +1,13 @@
+{
+  "snapshot": "2026-10-21",
+  "published": "2026-10-21",
+  "workflow_version": "13.4.18",
+  "release_tag": "v13.4.18-prep-20261021",
+  "director_version": "13.4.4-shot-detail-emotion-intent-opening-liveaction.1-20261020",
+  "default_stop": "before_video_generation",
+  "zip": "pixmax-workflow-B13.4.18-prep-20261021.zip",
+  "bytes": 1935823,
+  "sha256": "7aa6a4cdf62068e02fb0f6b5c62cb1d7517c63bcd9195c80377c64e0f865d906",
+  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.18-prep-20261021",
+  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.18-prep-20261021/pixmax-workflow-B13.4.18-prep-20261021.zip"
+}
