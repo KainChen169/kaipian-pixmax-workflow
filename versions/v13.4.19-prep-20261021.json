@@ -1,0 +1,13 @@
+{
+  "snapshot": "2026-10-21",
+  "published": "2026-10-21",
+  "workflow_version": "13.4.19",
+  "release_tag": "v13.4.19-prep-20261021",
+  "director_version": "13.4.4-liveaction-landmarks.2-20261021",
+  "default_stop": "before_video_generation",
+  "zip": "pixmax-workflow-B13.4.19-prep-20261021.zip",
+  "bytes": 1959091,
+  "sha256": "2b04e8c1f408031674e491cc023bba228f579747e7431335a19873219aef3184",
+  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.19-prep-20261021",
+  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.19-prep-20261021/pixmax-workflow-B13.4.19-prep-20261021.zip"
+}
