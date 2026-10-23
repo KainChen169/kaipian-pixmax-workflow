@@ -1,13 +1,13 @@
 {
   "snapshot": "2026-10-23",
   "published": "2026-10-23",
-  "workflow_version": "13.4.21",
-  "release_tag": "v13.4.21-prep-20261023",
-  "director_version": "13.4.4-liveaction-landmarks.3-20261022",
+  "workflow_version": "13.4.22",
+  "release_tag": "v13.4.22-prep-20261023",
+  "director_version": "13.4.4-liveaction-animal-voice.4-20261023",
   "default_stop": "before_video_generation",
-  "zip": "pixmax-workflow-B13.4.21-prep-20261023.zip",
-  "bytes": 1959230,
-  "sha256": "2d80e849cbc11379a9ad96537f1a21784828fc682462ee5ab9a961d8b4787adf",
-  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.21-prep-20261023",
-  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.21-prep-20261023/pixmax-workflow-B13.4.21-prep-20261023.zip"
+  "zip": "pixmax-workflow-B13.4.22-prep-20261023.zip",
+  "bytes": 1966873,
+  "sha256": "16db13fd8d3d1673fdd4c1041f175669b6c89b86439643b9d44efed87740e9a0",
+  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.22-prep-20261023",
+  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.22-prep-20261023/pixmax-workflow-B13.4.22-prep-20261023.zip"
 }
