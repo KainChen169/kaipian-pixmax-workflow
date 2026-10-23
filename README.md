@@ -1,46 +1,30 @@
-# Pixmax B13.4.20｜同场自然合包与480P规格锁
+# Pixmax B13.4.21｜内置补图后备
 
-工作流：13.4.20-prep-20261022。默认批量导演：13.4.4-liveaction-landmarks.3-20261022。独立首集导演不修改、不切换、不纳入本次发布包。
+工作流13.4.21-prep-20261023；默认批量导演仍13.4.4-liveaction-landmarks.3-20261022。本次仅调整必要图片失败恢复与导入规范，不修改导演、提示词标准或视频模型。
 
-## 1．分段偏好，不是最短时长硬门槛
+## 改动
 
-同一地点、同一连续场戏的内容能自然连演，合并后不超过30秒时优先合包；不按一句台词、一个情绪点或一次切镜机械拆成多个独立生成段。包内仍可快切，切镜不等于分包。
+Pixmax确实无法完成必要图片时，可在当次图片授权、预算及共享尝试额度内改用Codex内置图片生成器，不必先耗完平台重试，也不必为这个已授权后备渠道逐项询问。读取当前可用imagegen Skill及工具说明，使用实际母图，保留身份／当前形态、场景布局与道具实例；生成图保存项目内，看图验收后正式上传目标画布，回读真实资产及承载节点UUID，完成适用人像检测，再编译真实@及有序连线。
 
-20多秒、10来秒甚至不足10秒都有可能合理，不设最短包长、短包自动失败、接近30秒比例或必须30秒的配额。不加剧情、不重复动作／反应、不放慢表演、不拉长停顿凑满。先读完整场，再选择自然分界；真实换场／跳时、整场本来短、集尾、局部任务及LOCK按实际需要保留。
+平台和内置共享同一需求键、唯一认领及首次加最多2次追加总数；排队、运行或响应未知先对账，不双发。不因内置来源放宽验收；只上传失败只恢复导入，不重新生图。内置不可用不自动使用API Key／CLI或其他付费服务，不绕内容审核、身份、权限或参考隐私限制。轻微状态免补图、合格母图优先复用继续有效。
 
-设计复核举例（不是实际生成效果测试）：12秒＋14秒的连续同场内容可自然合并时优先26秒；23秒完整段不拉成30秒；整场6秒保留；30秒＋5秒先看能否移动自然切点改善短尾，不能就保留真实5秒，不把35秒扩成60秒。同地点但不同时间／场次不硬拼。
+这是Agent执行规范，不是自动跨平台重试程序。没有调用图片／视频工具、操作线上画布或做成片效果测试；视频、补修、超分、剪辑台及成片下载继续冻结。旧LOCK、历史任务、导演三镜开场、480P／9:16／有声音规格均保持；独立首集Skill不修改、不打包。
 
-本项只改变新写／授权改写时的分包选择，保留现有三镜开场及其他导演标准；绑定阶段不重写确定源稿、时间线或原话，历史LOCK不动。
+## 修改文件
 
-## 2．视频节点硬性规格
+仅pixmax-codex-pipeline：SKILL.md、AGENTS.md、VERSION；新增references/builtin-image-fallback.md；更新references/asset-generation-recovery.md、shared-asset-coordination.md、post-import-asset-analysis.md、bounded-retries-and-live-canvas.md、optimized-execution.md。脚本及校验器不改，保留全部验收。完整包其余8项Skill与runtime逐文件沿用B13.4.20；两个927旧流程和旧项目模板继续不打包。
 
-后续本工作流授权配置的Seedance2.5视频节点显式保存：resolution=480P、aspectRatio=9:16、includeAudio=true。不能继承项目或空节点模板的720P、错误画幅或静音值；这三项是强制要求，不是建议默认值。
+## 校验与安装
 
-创建前设定、实际保存后按节点UUID回读，未来获当次视频提交授权时再复核。缺失／错值先在已授权范围内修参数并回读，不改叙事、不启动生成。当前模型schema不支持要求则报告缺口，不擅自换规格或模型。
+运行原回归及隔离升级／重复安装／定点安装保留无关定制测试，实际结果见checks/离线校验结果.json。图片后备分支另做离线人工行为推演，见checks/内置补图行为复核.md，不将文档检查冒称工具自动化测试或线上生成效果验证。
 
-实际脚本修改：seedance25_contract.py新增规格核验及新执行副本缺项补齐；fast_bind.py编译前应用；submit_saved_batch.py分别检查计划与实际节点，即使双方同为720P也拦截；旧显式素材清单入口pixmax_pipeline.py修正2.5画幅与音频默认并检查明确错值。声音开启不等于已验证实际口型／音轨内容。
+下载入口：https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.21-prep-20261023
 
-旧720P节点／任务不自动修改或重生成，已接受任务仍可只读查询对账。参考图片、黑场参考、超分输出和其他模型不套基础视频规格。视频生成、补修、超分、剪辑台与下载继续冻结。
-
-## 范围、备份与验证
-
-本次只更新pixmax-codex-pipeline与默认批量导演；完整包仍9项Skills，其他7项与便携runtime逐文件沿用B13.4.19。两个927旧流程、旧项目模板、项目剧本／媒体／任务、账号凭据及独立首集Skill不打包。
-
-新增11项离线规格回归覆盖默认补齐不改输入、错误清单、平台／模板漂移、计划和实际同错仍拦截、声音真假值、合理短包及20多秒放行、超过30秒拒绝、其他模型／图片不受影响及旧任务只读对账。工作流186项测试中183通过、3项因FFmpeg未配置跳过；导演86项通过。分包合理性仍需读剧本，不用脚本秒数替代导演判断。
-
-checks/离线校验结果.json记录隔离升级、重复安装和选择升级保留无关定制；PACKAGE_MANIFEST.json记录逐文件哈希。官方quick_validate.py缺少PyYAML未运行，另做YAML基础解析；不将离线结果冒称线上平台或视频效果验证。本次没有操作历史画布或提交媒体生成。
-
-## 下载与安装
-
-https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.20-prep-20261022
-
-下载完整附件pixmax-workflow-B13.4.20-prep-20261022.zip，不是Source code。核对Release及versions/v13.4.20-prep-20261022.json的整体SHA-256。
-
-先备份注册Skills、实际维护源和相关AGENTS，检查未知定制／本机更高版本。使用Python3.10以上，在解压目录运行：
+下载完整附件pixmax-workflow-B13.4.21-prep-20261023.zip，不是Source code，核对Release及versions/v13.4.21-prep-20261023.json的ZIP SHA-256。先备份注册Skill、维护源及相关AGENTS，检查未知定制和本机更高版本。Python3.10以上执行：
 
 ```sh
 python3 verify_package.py
-python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --skill ab-test-seedance25-director-compiler-v13-4-0 --dry-run
+python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --dry-run
 ```
 
-确认范围后去掉--dry-run安装，再同步同名维护源并定点合并跨会话规则；不整份覆盖个人AGENTS，不改其他Skills。新电脑缺依赖先按--help完整dry-run、备份安装。刷新会话核对两项VERSION／哈希及测试，保留备份；不操作项目、不生成媒体、不恢复冻结、不再次发布本包。
+核对范围后去掉--dry-run安装，同步维护源并定点合并跨会话规则，不整份覆盖个人AGENTS。原有依赖／runtime／其他Skill不替换；新电脑按包内安装器帮助及依赖说明完整安装。仅更新，不制作、不返修历史项目、不恢复冻结、不再次发布。
