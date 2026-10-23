@@ -1,30 +1,32 @@
-# Pixmax B13.4.21｜内置补图后备
+# Pixmax B13.4.22｜会说话动物的声音身份
 
-工作流13.4.21-prep-20261023；默认批量导演仍13.4.4-liveaction-landmarks.3-20261022。本次仅调整必要图片失败恢复与导入规范，不修改导演、提示词标准或视频模型。
+工作流13.4.22-prep-20261023；默认批量导演13.4.4-liveaction-animal-voice.4-20261023。
 
-## 改动
+## 本次改动
 
-Pixmax确实无法完成必要图片时，可在当次图片授权、预算及共享尝试额度内改用Codex内置图片生成器，不必先耗完平台重试，也不必为这个已授权后备渠道逐项询问。读取当前可用imagegen Skill及工具说明，使用实际母图，保留身份／当前形态、场景布局与道具实例；生成图保存项目内，看图验收后正式上传目标画布，回读真实资产及承载节点UUID，完成适用人像检测，再编译真实@及有序连线。
+有动物口语、内心传音或动物旁白时，先继承来源／用户／项目既有声音设定；没有则按剧情设计简短的声音性别与年龄感、主要音色和演绎底色，例如年轻女性声线清亮利落、成年男性声线温厚直接、老年男性声线沉稳睿智。这些只是选声示例，不按物种套固定声音，也不改变动物剧情性别、形态或新增人类身份。
 
-平台和内置共享同一需求键、唯一认领及首次加最多2次追加总数；排队、运行或响应未知先对账，不双发。不因内置来源放宽验收；只上传失败只恢复导入，不重新生图。内置不可用不自动使用API Key／CLI或其他付费服务，不绕内容审核、身份、权限或参考隐私限制。轻微状态免补图、合格母图优先复用继续有效。
+声音底色在项目既有角色／表演记录保存一次并跨集／跨Agent复用。每个该动物实际发声的包，人物指定在状态后加一句声音身份，声音安排简述同一声线和声部；时间线原话前写当下说法，说明放引号外，不重复台词或新增第八板块。情绪可改变力度／气息，基础性别、年龄感和音色不无故改变；源确有变声则记录阶段，不机械全剧一声。
 
-这是Agent执行规范，不是自动跨平台重试程序。没有调用图片／视频工具、操作线上画布或做成片效果测试；视频、补修、超分、剪辑台及成片下载继续冻结。旧LOCK、历史任务、导演三镜开场、480P／9:16／有声音规格均保持；独立首集Skill不修改、不打包。
+纯叫声不新增人类语言；传音／旁白不改成张嘴说话。文字引导不等于精确声纹锁定；没有实际参考不声称克隆／音色绑定，不自动生音频、添加用户本人声音或提交收费任务。新写／获授权改写生效，绑定阶段只编译真实@，不改已确定源稿、旧LOCK、历史画布或任务；独立首集Skill不自动修改、不打包。
 
-## 修改文件
+图片后备、三镜开场、中文地标、480P／9:16／有声音、两秒黑场、回忆视觉交后期和所有冻结保持。本次没有生成图片／声音／视频或操作Pixmax画布。
 
-仅pixmax-codex-pipeline：SKILL.md、AGENTS.md、VERSION；新增references/builtin-image-fallback.md；更新references/asset-generation-recovery.md、shared-asset-coordination.md、post-import-asset-analysis.md、bounded-retries-and-live-canvas.md、optimized-execution.md。脚本及校验器不改，保留全部验收。完整包其余8项Skill与runtime逐文件沿用B13.4.20；两个927旧流程和旧项目模板继续不打包。
+## 修改文件与验证
 
-## 校验与安装
+主流程：SKILL.md、AGENTS.md、VERSION。默认导演：SKILL.md、VERSION、references/dialogue_performance_engine.md、prompt_compiler.md、quality_gates.md；另加结构示例及英文原话JSON和4项解析兼容回归。不增加物种／性别关键词硬拦截或自动声纹验收，其他7项Skills及runtime逐文件沿用B13.4.21。
 
-运行原回归及隔离升级／重复安装／定点安装保留无关定制测试，实际结果见checks/离线校验结果.json。图片后备分支另做离线人工行为推演，见checks/内置补图行为复核.md，不将文档检查冒称工具自动化测试或线上生成效果验证。
+导演90项通过（新增4项覆盖声音说明不混入台词／人类说话者、说明变化不影响逐字原话、错说话者／改词仍拦截、内心声部保留）；主流程186项中183通过、3项FFmpeg未配置跳过。完整包校验、隔离升级、重复安装及定点升级保留无关定制的实际结果见checks/离线校验结果.json。动物声线跨集选择等策略另在checks/动物声音行为复核.md人工离线推演，不冒称自动语义或实际声音效果测试。quick_validate.py缺PyYAML，另做Ruby YAML基础解析。
 
-下载入口：https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.21-prep-20261023
+## 下载与安装
 
-下载完整附件pixmax-workflow-B13.4.21-prep-20261023.zip，不是Source code，核对Release及versions/v13.4.21-prep-20261023.json的ZIP SHA-256。先备份注册Skill、维护源及相关AGENTS，检查未知定制和本机更高版本。Python3.10以上执行：
+https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.22-prep-20261023
+
+下载完整附件pixmax-workflow-B13.4.22-prep-20261023.zip，不是Source code；核对Release及versions/v13.4.22-prep-20261023.json的ZIP SHA-256。先备份注册Skills、维护源及相关AGENTS，检查未知定制和本机更高版本。Python3.10以上执行：
 
 ```sh
 python3 verify_package.py
-python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --dry-run
+python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --skill ab-test-seedance25-director-compiler-v13-4-0 --dry-run
 ```
 
-核对范围后去掉--dry-run安装，同步维护源并定点合并跨会话规则，不整份覆盖个人AGENTS。原有依赖／runtime／其他Skill不替换；新电脑按包内安装器帮助及依赖说明完整安装。仅更新，不制作、不返修历史项目、不恢复冻结、不再次发布。
+确认范围后去掉--dry-run安装，同步维护源并定点合并新增跨会话规则，不整份覆盖个人AGENTS。已有runtime与其他Skill不替换，新电脑缺依赖按包内安装器帮助完整安装；刷新会话核对VERSION和哈希。只更新，不制作、不改历史稿／LOCK／画布，不恢复冻结，不再次发布。
