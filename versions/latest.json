@@ -1,14 +1,20 @@
 {
   "snapshot": "2026-10-28",
   "published": "2026-10-28",
-  "workflow_version": "13.4.27",
-  "release_tag": "v13.4.27-prep-20261028",
+  "workflow_version": "13.4.28",
+  "release_tag": "v13.4.28-prep-20261028",
   "director_version": "13.4.4-liveaction-adaptive-detail.8-20261028",
   "animation_director_version": "1.1.1-pixmax-routing-20261026",
+  "default_video_model": "PIXDANCE_2_5_DRAFT",
+  "default_video_spec": {
+    "resolution": "480P",
+    "aspectRatio": "9:16",
+    "includeAudio": true
+  },
   "default_stop": "before_video_generation",
-  "zip": "pixmax-workflow-B13.4.27-prep-20261028.zip",
-  "bytes": 2022917,
-  "sha256": "81114f3210459fef7d467f104e8fc9df937aa0f35e89dd506c38812fc0080c0b",
-  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.27-prep-20261028",
-  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.27-prep-20261028/pixmax-workflow-B13.4.27-prep-20261028.zip"
+  "zip": "pixmax-workflow-B13.4.28-prep-20261028.zip",
+  "bytes": 2022673,
+  "sha256": "4109c25841c6283754064f08a5c0a7c81545780f56bbb93eaf85e6f59177c940",
+  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.28-prep-20261028",
+  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.28-prep-20261028/pixmax-workflow-B13.4.28-prep-20261028.zip"
 }
