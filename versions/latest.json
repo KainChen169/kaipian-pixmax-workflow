@@ -1,20 +1,25 @@
 {
   "snapshot": "2026-10-30",
   "published": "2026-10-30",
-  "workflow_version": "13.4.31",
-  "release_tag": "v13.4.31-prep-20261030",
-  "director_version": "13.4.4-liveaction-natural-storytelling.9-20261030",
+  "workflow_version": "13.4.32",
+  "version": "13.4.32-prep-20261030",
+  "director_version": "13.4.4-liveaction-spatial-continuity.10-20261030",
   "animation_director_version": "1.3.0-natural-performance-20261029",
   "default_video_model": "PIXDANCE_2_5_DRAFT",
   "default_stop": "before_video_generation",
-  "zip": "pixmax-workflow-B13.4.31-prep-20261030.zip",
-  "bytes": 2069724,
-  "sha256": "af6c18e3123215a9b8752e2c07696ded0daa599871d32dbd98ee0b1d0f40b4c6",
-  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.31-prep-20261030",
-  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.31-prep-20261030/pixmax-workflow-B13.4.31-prep-20261030.zip",
   "default_video_spec": {
     "resolution": "480P",
     "aspectRatio": "9:16",
     "includeAudio": true
-  }
+  },
+  "zip": "pixmax-workflow-B13.4.32-prep-20261030.zip",
+  "bytes": 2060956,
+  "sha256": "23917e82069240036de11444e5e4fa922a23a5483ef3e3daecc6d1d2fafb932e",
+  "publication_channel": "repository_archive",
+  "release_tag": null,
+  "release_url": null,
+  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/raw/refs/heads/main/packages/v13.4.32-prep-20261030/pixmax-workflow-B13.4.32-prep-20261030.zip",
+  "checksum_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/raw/refs/heads/main/packages/v13.4.32-prep-20261030/pixmax-workflow-B13.4.32-prep-20261030.zip.sha256",
+  "update_notes_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/blob/main/versions/v13.4.32-prep-20261030.md",
+  "publication_note": "内置浏览器发布通道不可用，本版通过GitHub插件上传为仓库版本化ZIP；未创建Release，历史Release不变。"
 }

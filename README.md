@@ -1,53 +1,49 @@
-# Pixmax B13.4.31｜自然讲戏与固定写稿负责人
+# Pixmax B13.4.32｜轻量站位继承
 
-工作流：`13.4.31-prep-20261030`
-真人导演：`13.4.4-liveaction-natural-storytelling.9-20261030`
+工作流：`13.4.32-prep-20261030`
+真人导演：`13.4.4-liveaction-spatial-continuity.10-20261030`
 动画导演保持：`1.3.0-natural-performance-20261029`
-默认规格：`PIXDANCE_2_5_DRAFT / 480P / 9:16 / includeAudio=true`
-默认终点：视频生成前。
+默认：Seedance 2.5 Draft / 480P / 9:16 / 有声音，停在视频生成前。
 
-## 本次更新
+## 仅三项改动
 
-- 每部剧固定一个写稿 Agent，按剧情顺序逐集写作与修订。上下文续跑使用既有状态记录；辅助校对、公共资产与确定稿画布准备仍可并行，每画布唯一写入者。
-- 真人正文用自然语言连起镜头、动作与情绪；普通镜头清楚即可，关键表演和复杂动作按剧情需要展开。删除无叙事作用的防错套话，保留人物有意义的拒绝、必要输出约束与技术检查。
-- 同步导演指导、画面＋表演模板和普通／关键／复杂动作示例。参考只在开写或校准时按需读取，不每集重读全部、不贴进成稿、不当句式模板。
-- 写稿负责人核对内容，工具核对对白、格式及真实 @；两种结果分开。绑定确定稿只插原生引用，不重新润色源文。
-- 包含此前本地 B13.4.30 的批量执行修复：内容交接、动态状态、校准和重复描述疑点工具。疑点不作为新硬门槛。
+1. 每包开场集中说明必要地标、身体朝向和相对位置，只写开始瞬间；未来走位进入实际镜头。
+2. 同场接续先继承上一包末态的位置与身体朝向，再选机位；不能只接住手部、道具而重新安排站位。
+3. 关键移动和遮挡写清通路、停点及谁能看见谁；普通镜头保持简洁，核对合入已有流程。
 
-不增加字数、扩写倍数、镜数、镜长、景别或否定句数量限制。保留七板块、独立开场站位、原话、自然时长、镜数参考、连续性、资产复用及真实 @ 原文可逆机制。动画写作规则、独立首集、历史 LOCK 与画布不改。只维护 Skills，不操作制作画布或生成媒体。
+同步工作流、真人Skill、七板块模板、开场示例和少量教学摘录。不增加逐镜站位栏、检查轮次、篇幅／镜数／镜长／景别／@配额。既有原话、自然时长、按需详略、固定写稿负责人、资产复用及真实@原文可逆规则保持。动画与独立首集、历史LOCK和画布不改。
 
-## 安装与兼容
+## 安装与边界
 
-完整包包含10个 Skill；本次只替换主工作流与真人导演，其余8个 Skill 和 vendor 与 B13.4.29 字节一致。旧927流程及项目模板仍不打包；无真实项目稿、账号凭据和项目媒体（工作流自带两秒黑场除外）。
+完整包包含10个Skill，仅更新工作流与真人导演；其余8个Skill和vendor与B13.4.31逐文件保持一致。旧927流程和项目模板不打包，未包含项目剧本、任务或凭据。自带两秒黑场继续仅连线。
 
-先阅读 `导入时复制给Agent.txt`，备份、核对定制后执行：
-```sh
-python3 verify_package.py
-python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --skill ab-test-seedance25-director-compiler-v13-4-0 --dry-run
+Python 3.10以上。在解压根目录先执行`python3 verify_package.py`，然后按《导入时复制给Agent.txt》定点升级。先核对本机定制与更高版本、备份，再安装；维护源和注册入口分别核对。不要覆盖较新CLI或登录状态。
+
+校验结果见`checks/离线校验结果.json`：原有主流程、真人、动画回归，真实@源文还原，B31→B32隔离升级、重复安装及无关定制保护。文件哈希与ZIP CRC另核验。语义示例核对是文字自洽检查，不是实际视频效果保证。
+
+## 下载
+
+[完整ZIP](https://github.com/KainChen169/kaipian-pixmax-workflow/raw/refs/heads/main/packages/v13.4.32-prep-20261030/pixmax-workflow-B13.4.32-prep-20261030.zip) · [SHA-256](https://github.com/KainChen169/kaipian-pixmax-workflow/raw/refs/heads/main/packages/v13.4.32-prep-20261030/pixmax-workflow-B13.4.32-prep-20261030.zip.sha256)
+
+本次采用仓库版本化下载包，未创建Release；旧Release保留。
+
+SHA-256：`23917e82069240036de11444e5e4fa922a23a5483ef3e3daecc6d1d2fafb932e`
+
+## 同事Codex更新指令
+
 ```
-确认差异后去掉 --dry-run 安装，再执行 dry-run 检查零差异。维护源与注册入口分别核对；不覆盖较新官方 CLI/runtime。新设备应先检查完整依赖，不能把定点升级当作完整环境安装。
+请实际下载、备份并更新本机Pixmax工作流至13.4.32-prep-20261030，真人导演至13.4.4-liveaction-spatial-continuity.10-20261030。
+仓库：https://github.com/KainChen169/kaipian-pixmax-workflow
+先读取仓库versions/v13.4.32-prep-20261030.json，按其中实际下载链接取得pixmax-workflow-B13.4.32-prep-20261030.zip及校验值，不使用旧Release或Source code替代。
 
-## 校验
+本次仅优化每包初始站位、同场跨包位置朝向继承、关键移动和遮挡的具体过程。普通镜头保持简洁，不增加机械限制，其他规则不变。
 
-结果见 `checks/离线校验结果.json`：主流程、真人和动画回归，当前自然语言示例的真实 @ 编译／原话保护／源文还原，B13.4.29→B13.4.31隔离升级、重复安装及保留无关定制测试；完整文件 SHA-256 与 ZIP CRC。离线验证不等于实际平台或成片效果验证。
-
-发布：https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.31-prep-20261030
-请实际下载、备份并更新本机 Pixmax 工作流：
-https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.31-prep-20261030
-
-下载 Release 附件 pixmax-workflow-B13.4.31-prep-20261030.zip 及同名 .zip.sha256，不用 Source code 替代。核对 ZIP SHA-256 和仓库 versions/v13.4.31-prep-20261030.json，安全解压，阅读 README、更新说明和安装器帮助。
-目标工作流 13.4.31-prep-20261030；真人导演 13.4.4-liveaction-natural-storytelling.9-20261030。动画导演保持 1.3.0-natural-performance-20261029。
-
-本次每部剧由一个固定 Agent 从头顺序写到底，辅助核对、资产和确定稿画布准备可分工。真人正文把镜头观察、人物动作与情绪用自然语言串起来，普通镜头清楚即可，关键表演按需展开；减少无关防御描述，不加字数、镜数或否定句数量门槛。
-
-先核对本机维护源码与 Codex 注册入口的真实路径、版本及定制，备份待覆盖文件。保留未知定制与更高版本，冲突定点合并，不整库覆盖。
-Python 3.10 以上，在解压根目录执行：
+核对本机维护源码与Codex注册入口的实际路径、版本和定制，先备份。保留更高版本及未知定制，冲突定点合并，不整库覆盖。校验ZIP SHA-256、安全解压，读取README与安装器帮助。
+Python 3.10以上，在解压根目录执行：
 python3 verify_package.py
 python3 install_upgrade.py --skills-only --skill pixmax-codex-pipeline --skill ab-test-seedance25-director-compiler-v13-4-0 --dry-run
-核对范围后同命令去掉 --dry-run 执行，再 dry-run 确认零差异。同步本机维护源及注册入口，不覆盖无关 Skills、全局偏好、较新官方 CLI/runtime 或登录状态。新设备先按 manifest 核对完整依赖。
-按 checks/离线校验结果.json 执行测试；真人测试需 PYTHONPATH=scripts，主流程测试需包内 vendor/pixmax-cli-runtime/vendor 依赖。结构通过与内容核对分开，离线通过不代表实际画面效果。
+核对变更范围后去掉--dry-run安装，再dry-run确认零差异。同步维护源与注册入口；不覆盖其他Skill、全局偏好、较新CLI/runtime或登录状态。新设备先按manifest检查完整依赖。
+按checks/离线校验结果.json复核测试；真人测试PYTHONPATH=scripts，主流程测试需包内vendor/pixmax-cli-runtime/vendor。报告实际版本、路径、备份、测试及冲突。
 
-仍默认 Seedance 2.5 Draft、480P、9:16、有声音，停在视频生成前。只安装，不制作、不收费、不改历史画布或旧 LOCK，不恢复视频、超分、剪辑台及下载，不再次发布 GitHub。报告实际版本、安装路径、备份、测试和剩余冲突。
-
-
-ZIP SHA-256: `af6c18e3123215a9b8752e2c07696ded0daa599871d32dbd98ee0b1d0f40b4c6`
+只安装，不制作、不收费、不修改历史画布或旧LOCK，不恢复视频生成、超分、剪辑台或下载，不再发布GitHub。保持Draft480P、9:16、有声音和视频前冻结。动画、独立首集及其他规则不变。
+```
