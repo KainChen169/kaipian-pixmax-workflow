@@ -1,0 +1,12 @@
+{
+  "workflow_version": "13.4.36-prep-20261104",
+  "default_director_version": "13.4.4-liveaction-character-baseline.10-20261104",
+  "animation_director_version": "1.5.1-rhythm-performance-local-20261030",
+  "release_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/tag/v13.4.36-prep-20261104",
+  "zip_name": "pixmax-workflow-B13.4.36-prep-20261104.zip",
+  "zip_bytes": 2035184,
+  "zip_sha256": "56cef63859109d69f443e4dfc91fb77cfade3d1de02abcbfe8bf0b1cf666970f",
+  "download_url": "https://github.com/KainChen169/kaipian-pixmax-workflow/releases/download/v13.4.36-prep-20261104/pixmax-workflow-B13.4.36-prep-20261104.zip",
+  "default_video_model": "PIXDANCE_2_5_DRAFT",
+  "generation_stage": "FROZEN_BEFORE_GENERATION"
+}
